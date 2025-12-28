@@ -1,16 +1,12 @@
----
-
 # Polymarket_AI_M3_Trading_Bot 🚀
 
 The **Polymarket AI M3 (Multi-Model Meta)** bot is a high-frequency algorithmic trading suite for the Polymarket CLOB (Central Limit Order Book). It automates the exact strategies used by top-tier whales to capture market inefficiencies.
 
 ## 📈 Included Strategies
 
-* **AI Probability Estimation:** Processes live news and social media sentiment to find "mispriced" markets where the AI-calculated odds differ from the market price (Used by *ilovecircle*, +$2.2M profit).
+* **AI Probability Estimation:** Processes live news and social media sentiment to find "mispriced" markets where the AI-calculated odds differ from the market price.
 * **Risk-Free Arbitrage:** Scans for 15-minute crypto/politics markets where YES + NO price < $0.99, locking in instant profit regardless of the outcome.
 * **Spread Farming:** Places high-frequency limit orders on both sides of the book to capture the bid-ask spread via the CLOB API.
-
----
 
 ## 🛠 Prerequisites (Step 1)
 
