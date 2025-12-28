@@ -1,12 +1,16 @@
 # Polymarket_AI_M3_Trading_Bot 🚀
 
-The **Polymarket AI M3 (Multi-Model Meta)** bot is a high-frequency algorithmic trading suite for the Polymarket CLOB (Central Limit Order Book). It automates the exact strategies used by top-tier whales to capture market inefficiencies.
+The **Polymarket AI M3 (Multi-Model Meta)** bot is a specialized high-speed execution suite designed to replicate the trades of top-tier professional traders in real-time. By monitoring specific "Smart Money" wallet addresses on the blockchain, the bot executes identical positions for your account within milliseconds of the target.
 
-## 📈 Included Strategies
+## 📈 How It Works
 
-* **AI Probability Estimation:** Processes live news and social media sentiment to find "mispriced" markets where the AI-calculated odds differ from the market price.
-* **Risk-Free Arbitrage:** Scans for 15-minute crypto/politics markets where YES + NO price < $0.99, locking in instant profit regardless of the outcome.
-* **Spread Farming:** Places high-frequency limit orders on both sides of the book to capture the bid-ask spread via the CLOB API.
+  *  **Target Mirroring:** You provide a specific wallet address to follow. The bot polls the Polymarket Data API specifically for that user's activity.
+
+   * **In-Memory Tracking:** The bot maintains a local session state to ensure it only copies a specific transaction once, preventing duplicate orders.
+
+   * **Direct CLOB Integration:** Trades are executed directly through the Polymarket Central Limit Order Book (CLOB) for the lowest possible latency.
+
+   * **Automatic Auth Handshake:** The system performs a secure L2 API handshake upon startup to ensure your session is authenticated and ready for high-frequency execution.
 
 ## 🛠 Prerequisites (Step 1)
 
@@ -65,7 +69,8 @@ npm install
 
 ### 4. Configure Your Key
 
-Rename the file `.env.example` to `.env`. Open it with Notepad or any text editor and paste your Private Key (see instructions below).
+Rename the file .env.example to .env. Open it with Notepad or any text editor and paste your Private Key in PRIVATE_KEY. 
+Also, input the address you will be copy trading in COPY_ADDRESS.
 
 ---
 
