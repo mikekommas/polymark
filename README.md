@@ -92,7 +92,7 @@ To trade programmatically, the bot requires your **L1 Private Key**.
 Once your `.env` file is saved with your key, run:
 
 ```bash
-node index.js
+node src/index.js
 
 ```
 
