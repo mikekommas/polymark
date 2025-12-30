@@ -108,10 +108,12 @@ node src/index.js
 
 The bot will now begin monitoring the Polymarket CLOB and mirroring trades from the selected smart-money wallet in real time.
 
+<img width="1343" height="548" alt="running" src="https://github.com/user-attachments/assets/f1760f3b-6036-4ba7-b3a1-47d1ca26552e" />
 ---
 
 ## Disclaimer
 
 This bot is for educational and experimental purposes only. Copy trading carries risk. Always understand what you are trading and never risk funds you cannot afford to lose.
 
-![Terminal Setup](./assets/running.png)
+
+
