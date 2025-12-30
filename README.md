@@ -113,3 +113,5 @@ The bot will now begin monitoring the Polymarket CLOB and mirroring trades from 
 ## Disclaimer
 
 This bot is for educational and experimental purposes only. Copy trading carries risk. Always understand what you are trading and never risk funds you cannot afford to lose.
+
+![Terminal Setup](./assets/running.png)
