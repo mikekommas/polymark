@@ -1,119 +1,61 @@
-# Polymarket_M3_Trading_Bot
+# Polymarket Copy Trading Bot
 
-The **Polymarket M3 (Multi-Model Meta) bot** is a specialized high-speed execution suite designed to replicate the trades of top-tier professional traders in real time. By monitoring specific **“Smart Money” wallet addresses** on the blockchain, the bot executes identical positions for your account within milliseconds of the target transaction.
+## Introduction
+This project is a Polymarket Copy Trading Bot that allows users to automatically copy trades from a selected trader on Polymarket.
 
----
+## Features
+- **Automated Trading**: Automatically copy trades from a selected trader.
+- **Real-time Monitoring**: Continuously monitor the selected trader's activity.
+- **Customizable Settings**: Configure trading parameters and risk management.
 
-## Prerequisites (Step 1)
+## Installation
+1. Install latest version of Node.js and npm
+2. Navigate to the project directory:
+    ```bash
+    cd polymarket_copy_trading_bot
+    ```
+3. Create `.env` file:
+    ```bash
+    touch .env
+    ```
+4. Configure env variables:
+    ```typescript
+    USER_ADDRESS = 'Selected account wallet address to copy'
 
-Before running the bot, you must have **Node.js** installed.
+    PROXY_WALLET = 'Your Polymarket account address'
+    PRIVATE_KEY = 'My wallet private key'
 
-### Download
-Visit https://nodejs.org and click **Download**.
+    CLOB_HTTP_URL = 'https://clob.polymarket.com/'
+    CLOB_WS_URL = 'wss://ws-subscriptions-clob.polymarket.com/ws'
 
-### Install
-Run the installer and click **Next** on all prompts.
+    FETCH_INTERVAL = 1      // default is 1 second
+    TOO_OLD_TIMESTAMP = 1   // default is 1 hour
+    RETRY_LIMIT = 3         // default is 3 times
 
-### Verify Installation
-Open a terminal or command prompt and run:
+    MONGO_URI = 'mongodb+srv://polymarket_copytrading_bot:V5ufvi9ra1dsOA9M@cluster0.j1flc.mongodb.net/polymarket_copytrading'
 
-```bash
-node -v
-```
+    RPC_URL = 'https://polygon-mainnet.infura.io/v3/90ee27dc8b934739ba9a55a075229744'
 
-If a version number appears, you are ready.
+    USDC_CONTRACT_ADDRESS = '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174'
+    ```
+3. Install the required dependencies:
+    ```bash
+    npm install
+    ```
+5. Build the project:
+    ```bash
+    npm run build
+    ```
+6. Run BOT:
+    ```bash
+    npm run start
+    ```
+7. ⚠ Choose reasonable location for the bot(Many users faced this problem, read this carefully before setting up the bot):
 
----
+   For users facing IP address-related access issues with Polymarket due to geographic restrictions, I recommend using [tradingvps.io](https://app.tradingvps.io/link.php?id=11) with the Netherlands location. This VPS service offers ultra-low latency and is physically close to Polymarket’s servers, ensuring faster response times and a smoother trading experience. It is specifically optimized for traders and easy to set up, making it an excellent choice for both beginners and experienced users looking to avoid IP-based blocks.
+ 
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request. And if you are interested in this project, please consider giving it a star✨.
 
-## Installation (Step 2)
-
-### Option A: Git Clone (Recommended for Developers)
-
-```bash
-git clone https://github.com/YourUsername/Polymarket_M3_Trading_Bot.git
-```
-
-### Option B: Download ZIP (Non-Developers)
-
-1. Click the green **“<> Code”** button on GitHub  
-2. Select **“Download ZIP”**  
-3. Extract the ZIP file to your Desktop  
-
----
-
-## Setting Up the Bot (Step 3)
-
-### Open the Terminal
-
-- **Windows:** Press `Win`, type `cmd`, press Enter  
-- **Mac:** Press `Cmd + Space`, type `Terminal`, press Enter  
-
-### Navigate to the Bot Folder
-
-Type `cd` followed by a space, then drag and drop the bot folder into the terminal. It should look similar to:
-
-```bash
-cd C:\Users\YourName\Desktop\Polymarket_M3_Bot
-```
-
-Press **Enter**.
-
-### Install Dependencies
-
-```bash
-npm install
-```
-
-### Configure Environment Variables
-
-1. Rename the file `_env` to `.env`  
-2. Open the `.env` file in a text editor  
-3. Fill in the following values:
-
-```env
-COPY_ADDRESS=wallet_address_you_are_copy_trading
-PERSONAL_WALLET=your_wallet_address_here
-PRIVATE_KEY=your_private_key_here
-```
-
----
-
-## How to Get Your Private Key
-
-### If You Use Email or Google (Magic Link)
-
-1. Visit https://reveal.magic.link/polymarket  
-2. Log in using your Polymarket email  
-3. Click **“Reveal Private Key”**  
-4. Copy the key starting with `0x`
-
-### If You Use MetaMask
-
-1. Open MetaMask and select your Polymarket account  
-2. Click **Account Details**  
-3. Select **Export Private Key**  
-4. Enter your password and copy the key  
-
-> ⚠️ **Never share your private key.** Anyone with access can control your funds.
-
----
-
-## Starting the Bot (Step 4)
-
-After saving your `.env` file, run:
-
-```bash
-node src/index.js
-```
-
-The bot will now begin monitoring the Polymarket CLOB and mirroring trades from the selected smart-money wallet in real time.
-
-<img width="1343" height="548" alt="running" src="https://github.com/user-attachments/assets/f1760f3b-6036-4ba7-b3a1-47d1ca26552e" />
----
-
-## Disclaimer
-
-This bot is for educational and experimental purposes only. Copy trading carries risk. Always understand what you are trading and never risk funds you cannot afford to lose.
-
-
-
+## Contact
+For updated version or any questions, please contact me at [Telegram](https://t.me/trust4120).
